@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinator Selectors Example</title>
+    <style>
+      .container p {
+        color: blue;
+        font-weight: bold;
+      }
+
+      /* Child Combinator */
+      .container > .child > .child-paragraph {
+        color: green;
+        font-style: italic;
+      }
+      h2 + .adjacent-sibling {
+        color: red;
+        font-size: 18px;
+      }
+      h2 ~ .general-sibling {
+        color: purple;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="descendant">Descendant paragraph 1</p>
+      <p class="descendant">Descendant paragraph 2</p>
+      <div class="child">
+        <p class="child-paragraph">Child paragraph</p>
+      </div>
+      <p class="not-child">Not a child paragraph</p>
+    </div>
+    <div class="sibling-container">
+      <h2>Heading</h2>
+      <p class="adjacent-sibling">Adjacent sibling paragraph</p>
+      <p class="general-sibling">General sibling paragraph 1</p>
+      <p class="general-sibling">General sibling paragraph 2</p>
+    </div>
+  </body>
+</html>
